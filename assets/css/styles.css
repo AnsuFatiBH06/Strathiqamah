@@ -1,0 +1,135 @@
+/* Light Mode Colors */
+:root {
+    --headerBgColor: rgba(225, 230, 245, 1.0);
+    --headerButtonColor: rgba(40, 40, 160, 0.85);
+    --headerButtonColor_HOVER: rgba(25, 25, 145, 0.65);
+    --headerButtonTextColor: rgba(255, 255, 255, 1.0);
+
+    --textColor: rgba(0,0,0,1.0);
+
+    --mainBgColor: rgba(240, 242, 250, 0.9);
+
+
+    /* --textColor_HOVER: rgb(230, 80, 80); */
+    --textColor_HOVER: rgb(200, 160, 40);
+
+    /* --boxShadowColor_HOVER: rgba(0,0,0,0.25); */
+    --boxShadowColor_HOVER: rgba(40, 40, 120, 0.25);
+
+    --infoDivBoxColor: rgba(20, 20, 140, 1.0);
+    --infoDivBoxColor_HOVER: rgba(7, 7, 116, 0.65);
+}
+
+/* Dark Mode Colors */
+.darkMode {
+    --headerBgColor: rgba(25, 25, 45, 1.0);
+    --headerButtonColor: rgba(90, 90, 200, 0.85);
+    --headerButtonColor_HOVER: rgba(90, 90, 200, 0.65);
+    --headerButtonTextColor: rgba(255, 255, 255, 1.0);
+
+    --textColor: rgba(255,255,255,1.0);
+    
+    --mainBgColor: rgba(15, 15, 30, 0.9);
+    
+
+    /* --textColor_HOVER: rgb(255, 120, 120); */
+    --textColor_HOVER: rgb(230, 190, 70);
+
+    /* --boxShadowColor_HOVER: rgba(255,255,255,0.15); */
+    --boxShadowColor_HOVER: rgba(255, 255, 255, 0.12);
+
+    --infoDivBoxColor: rgba(40, 40, 160, 1.0);
+    --infoDivBoxColor_HOVER: rgba(40, 40, 160, 0.65);
+}
+
+header {
+    background-color: var(--headerBgColor);
+    margin: auto auto;
+    padding: 10px 0px;
+    /* font-family: "Inter"; */
+    font-weight: bold;
+    font-size: 20px;
+    direction: ltr;
+
+    /* Header remains there even with bottom scrolling */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    /* Header remains there even with bottom scrolling */
+
+    /* display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 10px; */
+}
+
+.headerButton {
+    background-color: var(--headerButtonColor);
+    color: var(--headerButtonTextColor);
+    margin: auto 3px;
+    padding: 6px 15px;
+    width: 30%;
+    border-radius: 10px;
+    display: inline-block;
+
+    /* min-width: 180px; */
+    white-space: nowrap;
+}
+
+.headerButton:hover {
+    background-color: var(--headerButtonColor_HOVER);
+    /* transform: translateY(-4px); */
+    /* transform: scale(1.03); */
+    box-shadow: 0 0 20px var(--boxShadowColor_HOVER);
+    color: var(--textColor_HOVER);
+}
+
+body {
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+
+     /* Supporting the header */
+    margin: 0;
+    padding: 0;
+    padding-top: 75px;
+    /* Supporting the header */
+
+    /* background-color: rgba(23, 23, 183, 1.0); */
+    /* background-color: rgba(190,190,235,0.80); */
+    background-color: var(--mainBgColor);
+    color: var(--textColor);
+}
+
+table {
+    border: 1px solid black;
+    margin: auto auto;
+    width: 90%;
+    min-height: 500px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 0 0;
+}
+
+i {
+    margin: auto 6px;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 30px;
+    }
+
+    table {
+        width: 90%;
+        min-height: 100px;
+    }
+
+    th, td {
+        border: 1px solid black;
+    }
+}
