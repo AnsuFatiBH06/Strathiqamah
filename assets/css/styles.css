@@ -110,7 +110,7 @@ body {
     }
 }
 
-/* table {
+table {
     border: 1px solid black;
     margin: auto auto;
     width: 90%;
@@ -120,7 +120,7 @@ body {
 th, td {
     border: 1px solid black;
     padding: 0 0;
-} */
+}
 
 i {
     margin: auto 6px;
@@ -131,12 +131,12 @@ i {
         font-size: 30px;
     }
 
-    /* table {
+    table {
         width: 90%;
         min-height: 100px;
     }
 
     th, td {
         border: 1px solid black;
-    } */
+    }
 }
