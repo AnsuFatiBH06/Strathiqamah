@@ -102,7 +102,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 #timeWithoutSeconds {
@@ -140,14 +140,14 @@ th {
 
 td {
     text-align: center;
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: bold;
     border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
 th, td {
     color: var(--textColor);
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     overflow-wrap: break-word;
     border: 1px solid black;
