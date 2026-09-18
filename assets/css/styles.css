@@ -160,13 +160,11 @@ table {
 th {
     background-color: var(--infoDivBoxColor);
     font-size: 1.2em;
-    padding: 12px;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
 td {
-    padding: 15px;
     text-align: center;
     font-size: 1.4em;
     font-weight: bold;
@@ -209,9 +207,14 @@ i {
         font-size: 1.2em;
     }
 
+    .clockTitle {
+        font-size: 1.7em;
+        margin-bottom: 8px;
+    }
+
     th, td {
         font-size: 1.1em;
-        padding: 20px 0px;
+        padding: 0;
         word-wrap: break-word;
     }
 
