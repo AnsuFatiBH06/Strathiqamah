@@ -99,7 +99,7 @@ body {
 }
 
 .clockPanel {
-    background: linear-gradient(145deg, #1a1a2e, #16213e);
+    background: linear-gradient(145deg, #1a1a2e, #162755);
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
     border-radius: 15px;
 
@@ -197,14 +197,22 @@ td:nth-child(2) {
     color: #ffd700;
 } */
 
-
+/* 
 i {
     margin: auto 6px;
-}
+} */
 
 @media (max-width: 600px) {
     body {
         font-size: 1.2em;
+    }
+
+    #timeWithoutSeconds {
+        font-size: 1.5em;
+    }
+
+    #timeInSeconds {
+        font-size: 0.9em;
     }
 
     th, td {
@@ -215,10 +223,5 @@ i {
 
     td:nth-child(2) {
         font-size: 1.3em;
-    }
-
-    table {
-        width: 100%;
-        table-layout: fixed;
     }
 }
