@@ -104,6 +104,7 @@ body {
     border-radius: 15px;
 
     padding: 20px;
+    padding-top: 0px;
     margin: 0 auto; /* centers horizontally */
     width: 95%;
     height: 97vh;
@@ -111,7 +112,38 @@ body {
     box-sizing: border-box; /* ensures padding doesn’t push width */
     display: flex;
     align-items: center;
+    flex-direction: column; /* stack children vertically */
+    justify-content: flex-start;
+}
+
+.clockTitle {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.0em;
+    color: var(--textColor);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.currentTime {
+    display: flex;
     justify-content: center;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+#timeWithoutSeconds {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.0em;
+    color: var(--textColor);
+    /* text-shadow: 0 0 10px rgba(255,0,0,0.8); */
+    margin-right: 5px;
+}
+
+#timeInSeconds {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4em;
+    color: var(--textColor);
+    /* text-shadow: 0 0 8px rgba(255,0,0,0.7); */
 }
 
 table {
