@@ -20,5 +20,5 @@ function updateClock() {
     document.getElementById("timeInSeconds").textContent = `:${seconds}`;
 }
 
-// updateClock();
-// setInterval(updateClock, 1000);
+updateClock();
+setInterval(updateClock, 1000);

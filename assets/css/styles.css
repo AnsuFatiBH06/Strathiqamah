@@ -154,7 +154,7 @@ table {
     font-family: 'Courier New', monospace; /* digital clock feel */
     table-layout: fixed; /* forces equal column widths */
     word-wrap: break-word; /* allows wrapping */
-    height: 90vh;
+    flex-grow: 1;
 }
 
 th {
@@ -205,11 +205,6 @@ i {
 @media (max-width: 600px) {
     body {
         font-size: 1.2em;
-    }
-
-    .clockTitle {
-        font-size: 1.7em;
-        margin-bottom: 8px;
     }
 
     th, td {
