@@ -68,7 +68,7 @@ body {
 
 #timeWithoutSeconds, #timeInSeconds {
     font-family: 'Orbitron', sans-serif;
-    font-size: 0.9em;
+    font-size: 1.0em;
     font-weight: 600;
     color: var(--textColor);
     margin-top: 10px;
@@ -141,7 +141,7 @@ td:nth-child(2) {
     }
 
     #timeWithoutSeconds, #timeInSeconds {
-        font-size: 0.85em;
+        font-size: 1.12em;
         display: flex;
     }
 

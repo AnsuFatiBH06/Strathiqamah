@@ -26,7 +26,7 @@
 // Define only the relevant iqamah times
 const iqamahTimes = {
   Dhuhr: "11:45 AM",
-  Asr: "03:20 PM"
+  Asr: "03:10 PM"
 };
 
 // Convert "hh:mm AM/PM" to a Date object today
@@ -73,8 +73,8 @@ function updateCountdown() {
   // Update DOM
   document.getElementById("whichPrayer").textContent = prayer;
   document.getElementById("timeWithoutSeconds").textContent =
-    `${hours.toString().padStart(2,"0")} Hours, ${minutes.toString().padStart(2,"0")} Minutes, 
-    ${seconds.toString().padStart(2,"0")} Seconds`;
+    `${hours.toString().padStart(2,"0")} Hrs, ${minutes.toString().padStart(2,"0")} Mins, 
+    ${seconds.toString().padStart(2,"0")} Secs`;
 }
 
 // Run immediately and every second
