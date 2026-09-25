@@ -37,38 +37,50 @@ body {
     justify-content: flex-start;
 }
 
-.clockTitle, #remUntil {
+.remIqamahTime {
+    background-color: #162755;
+    margin: auto auto;
+    margin-bottom: 10px;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.clockTitle, #whichPrayer {
     font-family: 'Orbitron', sans-serif;
     color: var(--textColor);
     text-align: center;
 }
 
+#whichPrayer {
+    font-weight: 550;
+}
+
 .clockTitle {
     font-size: 2.0em;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin: 20px auto;
 }
 
 .currentTime {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    margin-bottom: 10px;
 }
 
-#timeWithoutSeconds {
+#timeWithoutSeconds, #timeInSeconds {
     font-family: 'Orbitron', sans-serif;
-    font-size: 2.0em;
+    font-size: 0.9em;
+    font-weight: 600;
     color: var(--textColor);
+    margin-top: 10px;
     /* text-shadow: 0 0 10px rgba(255,0,0,0.8); */
-    margin-right: 5px;
+    /* margin-right: 5px; */
 }
 
-#timeInSeconds {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.4em;
-    color: var(--textColor);
-    /* text-shadow: 0 0 8px rgba(255,0,0,0.7); */
+.remainingTimeTitle {
+    display: flex;
+    flex-direction: row;   /* side by side */
+    justify-content: center;
+    align-items: center;
 }
 
 table {
@@ -128,12 +140,9 @@ td:nth-child(2) {
         font-size: 1.2em;
     }
 
-    #timeWithoutSeconds {
-        font-size: 1.5em;
-    }
-
-    #timeInSeconds {
-        font-size: 0.9em;
+    #timeWithoutSeconds, #timeInSeconds {
+        font-size: 0.85em;
+        display: flex;
     }
 
     th, td {
