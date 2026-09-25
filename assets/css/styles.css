@@ -1,61 +1,8 @@
 /* Light Mode Colors */
 :root {
-    --headerBgColor: rgba(225, 230, 245, 1.0);
-    --headerButtonColor: rgba(40, 40, 160, 0.85);
-    --headerButtonColor_HOVER: rgba(25, 25, 145, 0.65);
-    --headerButtonTextColor: rgba(255, 255, 255, 1.0);
-
     --textColor: rgba(255, 255, 255, 1.0);
-
-    --mainBgColor: rgba(240, 242, 250, 0.9);
-
-
-    /* --textColor_HOVER: rgb(230, 80, 80); */
-    --textColor_HOVER: rgb(200, 160, 40);
-
-    /* --boxShadowColor_HOVER: rgba(0,0,0,0.25); */
-    --boxShadowColor_HOVER: rgba(40, 40, 120, 0.25);
-
     --infoDivBoxColor: rgba(20, 20, 140, 1.0);
-    --infoDivBoxColor_HOVER: rgba(7, 7, 116, 0.65);
-}
-
-header {
-    background-color: var(--headerBgColor);
-    margin: auto auto;
-    padding: 10px 0px;
-    /* font-family: "Inter"; */
-    font-weight: bold;
-    font-size: 20px;
-    direction: ltr;
-
-    /* Header remains there even with bottom scrolling */
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    /* Header remains there even with bottom scrolling */
-}
-
-.headerButton {
-    background-color: var(--headerButtonColor);
-    color: var(--headerButtonTextColor);
-    margin: auto 3px;
-    padding: 6px 15px;
-    width: 30%;
-    border-radius: 10px;
-    display: inline-block;
-
-    /* min-width: 180px; */
-    white-space: nowrap;
-}
-
-.headerButton:hover {
-    background-color: var(--headerButtonColor_HOVER);
-    /* transform: translateY(-4px); */
-    /* transform: scale(1.03); */
-    box-shadow: 0 0 20px var(--boxShadowColor_HOVER);
-    color: var(--textColor_HOVER);
+    --mainBgColor: rgba(240, 242, 250, 0.9);
 }
 
 body {
@@ -90,12 +37,16 @@ body {
     justify-content: flex-start;
 }
 
-.clockTitle {
+.clockTitle, #remUntil {
     font-family: 'Orbitron', sans-serif;
-    font-size: 2.0em;
     color: var(--textColor);
-    margin-bottom: 10px;
     text-align: center;
+}
+
+.clockTitle {
+    font-size: 2.0em;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .currentTime {
@@ -171,10 +122,6 @@ td:nth-child(2) {
     color: #ffd700;
 } */
 
-/* 
-i {
-    margin: auto 6px;
-} */
 
 @media (max-width: 600px) {
     body {
