@@ -70,6 +70,11 @@ function updateCountdown() {
   const minutes = Math.floor((diffSec % 3600) / 60);
   const seconds = diffSec % 60;
 
+  if (hours == 0 && minutes < 10) {
+    const remTime = document.getElementById("timeWithoutSeconds");
+    remTime.style.color = "#ff2a2a";
+  }
+
   // Update DOM
   document.getElementById("whichPrayer").textContent = prayer;
   document.getElementById("timeWithoutSeconds").textContent =

@@ -1,6 +1,8 @@
 /* Light Mode Colors */
 :root {
     --textColor: rgba(255, 255, 255, 1.0);
+    --redTextColor: #ff2a2a;
+    --iqamahCountDownColor: rgba(255, 204, 0, 0.7);
     --infoDivBoxColor: rgba(20, 20, 140, 1.0);
     --mainBgColor: rgba(240, 242, 250, 0.9);
 }
@@ -70,7 +72,7 @@ body {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.0em;
     font-weight: 600;
-    color: var(--textColor);
+    color: var(--iqamahCountDownColor);
     margin-top: 10px;
     /* text-shadow: 0 0 10px rgba(255,0,0,0.8); */
     /* margin-right: 5px; */
@@ -124,7 +126,7 @@ tr:nth-child(even) {
 td:nth-child(2) {
     font-size: 1.2em;
     font-family: 'Orbitron', sans-serif;
-    color: #ff2a2a;
+    color: var(--redTextColor);
 }
 
 /* gold accent */
