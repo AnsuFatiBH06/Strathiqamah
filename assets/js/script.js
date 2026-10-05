@@ -70,14 +70,17 @@ function updateCountdown() {
   const minutes = Math.floor((diffSec % 3600) / 60);
   const seconds = diffSec % 60;
 
+  const remTime = document.getElementById("timeWithoutSeconds");
+
   if (hours == 0 && minutes < 10) {
-    const remTime = document.getElementById("timeWithoutSeconds");
-    remTime.style.color = "#ff2a2a";
+    remTime.style.color = "var(--redTextColor)";
+  } else {
+    remTime.style.color = "var(--iqamahCountDownColor)";
   }
 
   // Update DOM
   document.getElementById("whichPrayer").textContent = prayer;
-  document.getElementById("timeWithoutSeconds").textContent =
+  remTime.textContent =
     `${hours.toString().padStart(2,"0")} Hrs, ${minutes.toString().padStart(2,"0")} Mins, 
     ${seconds.toString().padStart(2,"0")} Secs`;
 }
