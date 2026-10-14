@@ -71,7 +71,7 @@ body {
 
 #timeWithoutSeconds, #timeInSeconds {
     font-family: 'Orbitron', sans-serif;
-    font-size: 1.0em;
+    font-size: 1.15em;
     font-weight: 600;
     color: var(--iqamahCountDownColor);
     margin-top: 10px;

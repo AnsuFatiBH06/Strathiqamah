@@ -23,10 +23,18 @@
 // updateClock();
 // setInterval(updateClock, 1000);
 
+let dhuhrIqamahTime = document.getElementById("dhuhrIqamahTime").innerText;
+if (dhuhrIqamahTime[1] === '1') {
+  dhuhrIqamahTime += " AM";
+} else if (dhuhrIqamahTime[1] === '2') {
+  dhuhrIqamahTime += " PM";
+}
+const asrIqamahTime = "0" + document.getElementById("asrIqamahTime").innerText + " PM";
+
 // Define only the relevant iqamah times
 const iqamahTimes = {
-  Dhuhr: "11:45 AM",
-  Asr: "03:10 PM"
+  Dhuhr: dhuhrIqamahTime,
+  Asr: asrIqamahTime
 };
 
 // Convert "hh:mm AM/PM" to a Date object today
