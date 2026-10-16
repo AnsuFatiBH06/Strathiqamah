@@ -74,10 +74,10 @@ document.getElementById("toggleOverlay").addEventListener("click", () => {
   const overlay = document.getElementById("iqamahOverlay");
   if (overlay.classList.contains("minimized")) {
     overlay.classList.remove("minimized");
-    document.getElementById("toggleOverlay").textContent = "MINIMIZE";
+    document.getElementById("toggleOverlay").textContent = "Minimize";
   } else {
     overlay.classList.add("minimized");
-    document.getElementById("toggleOverlay").textContent = "MAXIMIZE";
+    document.getElementById("toggleOverlay").textContent = "Maximize";
   }
 });
 
@@ -100,14 +100,14 @@ function getNextPrayer() {
   const asrTime = parseTime(iqamahTimes.Asr);
 
   if (now < dhuhrTime) {
-    return { prayer: "Remaining Until Dhuhr Iqamah", prayerTime: dhuhrTime };
+    return { prayer: "Remaining Until Dhuhr Iqamah:", prayerTime: dhuhrTime };
   } else if (now < asrTime) {
-    return { prayer: "Remaining Until Asr Iqamah", prayerTime: asrTime };
+    return { prayer: "Remaining Until Asr Iqamah:", prayerTime: asrTime };
   } else {
     // After Asr, next is tomorrow's Dhuhr
     const tomorrowDhuhr = parseTime(iqamahTimes.Dhuhr);
     tomorrowDhuhr.setDate(tomorrowDhuhr.getDate() + 1);
-    return { prayer: "Remaining Until Dhuhr Iqamah", prayerTime: tomorrowDhuhr };
+    return { prayer: "Remaining Until Dhuhr Iqamah:", prayerTime: tomorrowDhuhr };
   }
 }
 

@@ -2,7 +2,7 @@
 :root {
     --textColor: rgba(255, 255, 255, 1.0);
     --redTextColor: #ff2a2a;
-    --iqamahCountDownColor: rgba(255, 204, 0, 0.7);
+    --iqamahCountDownColor: rgba(255, 204, 0, 0.849);
     --infoDivBoxColor: rgba(20, 20, 140, 1.0);
     --mainBgColor: rgba(240, 242, 250, 0.9);
 }
@@ -34,12 +34,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly; /* equal spacing between sections */
-  align-items: center;
+  align-items: stretch;
   z-index: 9999;
 }
 
 .overlaySection {
   text-align: center;
+  font-weight: bold;
 }
 
 /* Minimized overlay bar */
@@ -53,9 +54,19 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 8px;
+  align-items: stretch;
+  padding: 4px 0;
   z-index: 9999;
+}
+
+#toggleOverlay {
+    font-size: 20px;
+    width: 90%;
+    height: 100%;
+}
+
+#elapsedSinceIqamah {
+    color: var(--iqamahCountDownColor);
 }
 
 /* Hide the big message when minimized */
