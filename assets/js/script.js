@@ -23,6 +23,10 @@
 // updateClock();
 // setInterval(updateClock, 1000);
 
+let overlayTimer = null;
+let elapsedInterval = null;
+let overlayActive = false;
+
 let dhuhrIqamahTime = document.getElementById("dhuhrIqamahTime").innerText;
 if (dhuhrIqamahTime[1] === '1') {
   dhuhrIqamahTime += " AM";
@@ -36,6 +40,46 @@ const iqamahTimes = {
   Dhuhr: dhuhrIqamahTime,
   Asr: asrIqamahTime
 };
+
+function showOverlay() {
+  const overlay = document.getElementById("iqamahOverlay");
+  overlay.style.display = "flex";
+  overlay.classList.remove("minimized");
+  document.getElementById("toggleOverlay").textContent = "MINIMIZE";
+
+  const start = new Date();
+  elapsedInterval = setInterval(() => {
+    const now = new Date();
+    const diffSec = Math.floor((now - start) / 1000);
+    const minutes = Math.floor(diffSec / 60);
+    const seconds = diffSec % 60;
+    document.getElementById("elapsedSinceIqamah").textContent =
+      `${minutes.toString().padStart(2,"0")} Mins ${seconds.toString().padStart(2,"0")} Secs`;
+  }, 1000);
+
+  overlayTimer = setTimeout(hideOverlay, 5 * 60 * 1000);
+  overlayActive = true;
+}
+
+function hideOverlay() {
+  const overlay = document.getElementById("iqamahOverlay");
+  overlay.style.display = "none";
+  clearInterval(elapsedInterval);
+  clearTimeout(overlayTimer);
+  overlayActive = false;
+}
+
+// Toggle minimize/maximize
+document.getElementById("toggleOverlay").addEventListener("click", () => {
+  const overlay = document.getElementById("iqamahOverlay");
+  if (overlay.classList.contains("minimized")) {
+    overlay.classList.remove("minimized");
+    document.getElementById("toggleOverlay").textContent = "MINIMIZE";
+  } else {
+    overlay.classList.add("minimized");
+    document.getElementById("toggleOverlay").textContent = "MAXIMIZE";
+  }
+});
 
 // Convert "hh:mm AM/PM" to a Date object today
 function parseTime(timeStr) {
@@ -84,6 +128,10 @@ function updateCountdown() {
     remTime.style.color = "var(--redTextColor)";
   } else {
     remTime.style.color = "var(--iqamahCountDownColor)";
+  }
+
+  if (hours === 0 && minutes === 0 && seconds === 0 && !overlayActive) {
+    showOverlay();
   }
 
   // Update DOM
