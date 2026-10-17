@@ -45,7 +45,7 @@ function showOverlay() {
   const overlay = document.getElementById("iqamahOverlay");
   overlay.style.display = "flex";
   overlay.classList.remove("minimized");
-  document.getElementById("toggleOverlay").textContent = "MINIMIZE";
+  document.getElementById("toggleOverlay").textContent = "Minimize";
 
   const start = new Date();
   elapsedInterval = setInterval(() => {
@@ -67,6 +67,7 @@ function hideOverlay() {
   clearInterval(elapsedInterval);
   clearTimeout(overlayTimer);
   overlayActive = false;
+  document.body.classList.remove("overlayMinimized");
 }
 
 // Toggle minimize/maximize
@@ -74,9 +75,11 @@ document.getElementById("toggleOverlay").addEventListener("click", () => {
   const overlay = document.getElementById("iqamahOverlay");
   if (overlay.classList.contains("minimized")) {
     overlay.classList.remove("minimized");
+    document.body.classList.remove("overlayMinimized");
     document.getElementById("toggleOverlay").textContent = "Minimize";
   } else {
     overlay.classList.add("minimized");
+    document.body.classList.add("overlayMinimized");
     document.getElementById("toggleOverlay").textContent = "Maximize";
   }
 });

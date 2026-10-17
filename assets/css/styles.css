@@ -45,18 +45,29 @@ body {
 
 /* Minimized overlay bar */
 #iqamahOverlay.minimized {
-  position: fixed;
+  position: relative;
   top: 0; left: 0;
   width: 100%;
   height: auto;
   background-color: #111;
   color: white;
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
   padding: 4px 0;
   z-index: 9999;
+}
+
+body.overlayMinimized {
+    display: block;
+    .clockPanel {
+        h1, .remIqamahTime {
+            display: none;
+        }
+        border-radius: 0;
+        width: 100%;
+    }
 }
 
 #toggleOverlay {
@@ -70,13 +81,17 @@ body {
 }
 
 /* Hide the big message when minimized */
-#iqamahOverlay.minimized #overlayMessage {
+#iqamahOverlay.minimized #overlayMessage,
+#iqamahOverlay.minimized #overlayMessagePrayerIqamah {
   display: none;
 }
 
 /* Ensure even spacing in minimized mode */
 #iqamahOverlay.minimized .overlaySection {
-  margin: 4px 0;
+
+  h3, #elapsedSinceIqamah {
+    margin-bottom: 0px;
+  }
 }
 /* Overlay Container */
 /* Overlay Container */
@@ -216,4 +231,18 @@ td:nth-child(2) {
     td:nth-child(2) {
         font-size: 1.3em;
     }
+
+    /* #iqamahOverlay {
+        font-size: 1.5em;
+        * {
+            margin: auto 5px;
+        }
+    }
+
+    #iqamahOverlay.minimized {
+        font-size: 1.1em;
+        * {
+            margin: 6px auto;
+        }
+    } */
 }
